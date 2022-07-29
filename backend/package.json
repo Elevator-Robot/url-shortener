@@ -1,8 +1,8 @@
 {
-  "name": "api-cdk",
+  "name": "backend",
   "version": "0.1.0",
   "bin": {
-    "api-cdk": "bin/cdk.js"
+    "backend": "bin/backend.js"
   },
   "scripts": {
     "build": "tsc",
