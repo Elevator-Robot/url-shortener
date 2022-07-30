@@ -16,9 +16,7 @@ import { SearchIcon } from '@heroicons/react/solid'
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
   { name: 'Team', href: '#', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
   { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: InboxIcon, current: false },
   { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
 ]
 const userNavigation = [
@@ -164,9 +162,9 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
       </div>
 
-      <div className="z-30 md:pl-64">
+      <div className="md:pl-64">
         <div className="max-w-4xl mx-auto flex flex-col md:px-8 xl:px-0">
-          <div className="sticky top-0 z-10 flex-shrink-0 h-16 bg-white border-b border-gray-200 flex">
+          <div className="sticky top-0 z-30 flex-shrink-0 h-16 bg-white border-b border-gray-200 flex">
             <button
               type="button"
               className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
@@ -175,7 +173,7 @@ const Layout = ({ children }: LayoutProps) => {
               <span className="sr-only">Open sidebar</span>
               <MenuAlt2Icon className="h-6 w-6" aria-hidden="true" />
             </button>
-            <div className="z-30 flex-1 flex justify-between px-4 md:px-0">
+            <div className="flex-1 flex justify-between px-4 md:px-0">
               <div className="flex-1 flex">
                 <form className="w-full flex md:ml-0" action="#" method="GET">
                   <label htmlFor="search-field" className="sr-only">
@@ -250,7 +248,7 @@ const Layout = ({ children }: LayoutProps) => {
 
           <main className="flex-1">
             <div className="py-6">
-              <div className="relative px-4 sm:px-6 md:px-0">
+              <div className="px-4 sm:px-6 md:px-0">
                 {children}
               </div>
             </div>

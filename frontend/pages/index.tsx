@@ -3,6 +3,7 @@ import type { NextPageWithLayout } from './_app'
 
 import { QrcodeIcon, ChartSquareBarIcon } from '@heroicons/react/outline'
 import { Fragment } from 'react'
+import { PencilIcon } from '@heroicons/react/solid'
 
 
 const urls = [
@@ -38,6 +39,7 @@ const Home: NextPageWithLayout = () => {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:items-center">
           <div className="sm:flex-auto">
+            <h1 className="text-3xl font-bold leading-tight">URLs</h1>
             <p className="mt-2 text-sm text-gray-700">
               A list of all the you have created.
             </p>
@@ -55,7 +57,7 @@ const Home: NextPageWithLayout = () => {
           <div className="-my-2 -mx-4 sm:-mx-6 lg:-mx-8">
             <div className="inline-block min-w-full py-2 align-middle">
               <div className="shadow-sm ring-1 ring-black ring-opacity-5">
-                <table className="min-w-full border-separate" style={{ borderSpacing: 0 }}>
+                <table className="min-w-full" style={{ borderSpacing: 0 }}>
                   <thead className="bg-gray-50">
                     <tr>
                       <th
@@ -92,10 +94,10 @@ const Home: NextPageWithLayout = () => {
                   </thead>
                   <tbody className="bg-white">
                     {urls.map((url, urlIdx) => (
-                      <tr key={url.shorturl}>
+                      <tr key={url.shorturl} className="border-b border-gray-200">
                         <td
                           className={classNames(
-                            urlIdx !== urls.length - 1 ? 'border-b border-gray-200' : '',
+                            urlIdx !== urls.length - 1 ? '' : '',
                             'whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8'
                           )}
                         >
@@ -103,7 +105,7 @@ const Home: NextPageWithLayout = () => {
                         </td>
                         <td
                           className={classNames(
-                            urlIdx !== urls.length - 1 ? 'border-b border-gray-200' : '',
+                            urlIdx !== urls.length - 1 ? '' : '',
                             'whitespace-nowrap px-3 py-4 text-sm text-gray-500 hidden sm:table-cell'
                           )}
                         >
@@ -111,7 +113,7 @@ const Home: NextPageWithLayout = () => {
                         </td>
                         <td
                           className={classNames(
-                            urlIdx !== urls.length - 1 ? 'border-b border-gray-200' : '',
+                            urlIdx !== urls.length - 1 ? '' : '',
                             'whitespace-nowrap px-3 py-4 text-sm text-gray-500 hidden lg:table-cell'
                           )}
                         >
@@ -119,7 +121,7 @@ const Home: NextPageWithLayout = () => {
                         </td>
                         <td
                           className={classNames(
-                            urlIdx !== urls.length - 1 ? 'border-b border-gray-200' : '',
+                            urlIdx !== urls.length - 1 ? '' : '',
                             'whitespace-nowrap px-3 py-4 text-sm text-gray-500'
                           )}
                         >
@@ -127,13 +129,13 @@ const Home: NextPageWithLayout = () => {
                         </td>
                         <td
                           className={classNames(
-                            urlIdx !== urls.length - 1 ? 'border-b border-gray-200' : '',
-                            'relative whitespace-nowrap py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-6 lg:pr-8'
+                            urlIdx !== urls.length - 1 ? '' : '',
+                            'relative flex whitespace-nowrap text-right text-sm py-4 font-medium space-between'
                           )}
                         >
-                          <a href="#" className="text-indigo-600 hover:text-indigo-900">
-                            Edit<span className="sr-only">, {url.creator}</span>
-                          </a>
+                          <QrcodeIcon className="mr-2 w-5 h-5" />
+                          <ChartSquareBarIcon className="mr-2 w-5 h-5" />
+                          <PencilIcon className="mr-2 w-5 h-5" />
                         </td>
                       </tr>
                     ))}
