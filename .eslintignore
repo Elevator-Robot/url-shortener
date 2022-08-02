@@ -25,11 +25,13 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
+# environment
 .env*.local
+.vscode
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
+

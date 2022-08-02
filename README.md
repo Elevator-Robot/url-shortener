@@ -1,7 +1,8 @@
 # URL Shortener
 
 ## Frontend
-The frontend is a UI built on NextJS and Tailwind UI
+
+The frontend is a UI built with on AWS Amplify with NextJS and Tailwind UI
 
 ## Backend
 
